@@ -48,7 +48,7 @@ const images = [
 
 const gallery = document.querySelector('.gallery')
 
-images.forEach((image, index) => {
+images.forEach(image => {
 	const galleryItem = document.createElement('li')
 	galleryItem.classList.add('gallery-item')
 
@@ -70,3 +70,15 @@ images.forEach((image, index) => {
 	galleryItem.appendChild(galleryLink)
 	gallery.appendChild(galleryItem)
 })
+// console.log(gallery.innerHTML)
+
+gallery.addEventListener('click', handleClick)
+
+function handleClick(event) {
+	event.preventDefault()
+	if (event.target === event.currentTarget) {
+		return
+	}
+	const largeImage = event.target.dataset.source
+	console.log(largeImage)
+}
