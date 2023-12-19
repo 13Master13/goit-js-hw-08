@@ -70,7 +70,6 @@ images.forEach(image => {
 	galleryItem.appendChild(galleryLink)
 	gallery.appendChild(galleryItem)
 })
-// console.log(gallery.innerHTML)
 
 gallery.addEventListener('click', handleClick)
 
